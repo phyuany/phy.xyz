@@ -2,7 +2,7 @@
 <html lang="zh">
 
 <head>
-    <title>极客开发者 | algs.tech</title>
+    <title>极客开发者 algs.tech</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -44,10 +44,10 @@
             width: 90%;
             max-width: 320px;
             transform: translateY(20px) scale(0.95);
-            transition: transform 300ms cubic-bezier(.2,.8,.2,1), opacity 300ms ease;
+            transition: transform 300ms cubic-bezier(.2, .8, .2, 1), opacity 300ms ease;
             opacity: 0;
             position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             border-radius: 8px;
             overflow: visible;
         }
@@ -59,7 +59,7 @@
             inset: 0;
             border-radius: 8px;
             z-index: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.12) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.12) 100%);
         }
 
         .modal.show .modal-content {
@@ -83,13 +83,14 @@
             cursor: pointer;
         }
 
-        .copyright li{
+        .copyright li {
             color: #ffffff;
-            text-transform: lowercase;
         }
 
         @media (max-width: 480px) {
-            .modal-content { max-width: 280px; }
+            .modal-content {
+                max-width: 280px;
+            }
         }
     </style>
 </head>
@@ -109,6 +110,10 @@
             </header>
             <footer>
                 <ol>
+                    <li>
+                        <a href="mailto:pan.hy@foxmail.com" target="_blank">邮箱</a>
+                    </li>
+                    |
                     <li><a href="https://www.zhihu.com/people/jkdev.cn" target="_blank">知乎</a>
                     </li>
                     |
@@ -123,10 +128,9 @@
         <!-- Footer -->
         <footer id="footer">
             <ul class="copyright">
-                <li>&copy; algs.tech</li>
-                </li>
+                <li style="text-transform: lowercase;">&copy; algs.tech</li>
                 <li>
-                    <a href="mailto:pan.hy@foxmail.com" target="_blank">邮箱: pan.hy@foxmail.com</a>
+                    <a href="http://beian.miit.gov.cn/" target="_blank">黔ICP备2024030886号-3</a>
                 </li>
             </ul>
         </footer>
@@ -150,14 +154,14 @@
             var modal = document.getElementById("myModal");
             var modalImg = document.getElementById("modal-img");
 
-            function showImage() {
+            function showImage () {
                 modalImg.src = "../images/wechat.jpg";
                 modal.classList.add('show');
                 document.documentElement.style.overflow = 'hidden';
                 document.body.style.overflow = 'hidden';
             }
 
-            function hideModal() {
+            function hideModal () {
                 modal.classList.remove('show');
                 setTimeout(function () {
                     modalImg.src = '';
